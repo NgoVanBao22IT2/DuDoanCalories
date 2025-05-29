@@ -32,7 +32,7 @@ Các chỉ số đánh giá:
 + Mean Absolute Error (MAE) (Sai số trung bình tuyệt đối)
 + Cross-validation score (Kiểm tra tính ổn định của mô hình)
 
-5. Giao diện phần mềm dự đoán calories
+GIAO DIỆN PHẦN MỀM DỰ ĐOÁN CALORIES
 ![Screenshot (448)](https://github.com/user-attachments/assets/261f6e3b-48fe-4c5a-87bc-87e35f211ae1)
 ![Screenshot (449)](https://github.com/user-attachments/assets/8eb5ef9a-2c52-4e4f-9a83-9eb716156e2d)
 ![Screenshot (450)](https://github.com/user-attachments/assets/873faa10-7226-4bc8-af6b-6882a9abfccd)
