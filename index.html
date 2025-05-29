@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Dự Đoán Lượng Calo Tiêu Thụ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #4b6cb7;
+        }
+        .testimonial-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #182848;
+            color: white;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-fire me-2"></i>CaloBurn
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Tính năng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">Cách hoạt động</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Đánh giá</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Dự đoán calo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3" href="/login">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Dự Đoán Lượng Calo Tiêu Thụ</h1>
+            <p class="lead mb-5">Hệ thống thông minh giúp bạn tính toán lượng calo tiêu thụ dựa trên các hoạt động thể chất</p>
+            <div class="d-flex justify-content-center">
+                <a href="/predict" class="btn btn-light btn-lg me-3">Bắt đầu ngay</a>
+                <a href="#how-it-works" class="btn btn-outline-light btn-lg">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Sẵn sàng bắt đầu?</h2>
+            <p class="lead mb-4">Đăng ký miễn phí ngay hôm nay và bắt đầu theo dõi lượng calo tiêu thụ của bạn!</p>
+            <a href="/register" class="btn btn-light btn-lg">Đăng ký ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Về chúng tôi</h5>
+                    <p>CaloBurn là hệ thống dự đoán lượng calo tiêu thụ sử dụng công nghệ AI tiên tiến giúp người dùng theo dõi hiệu quả hoạt động thể chất.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Trang chủ</a></li>
+                        <li><a href="/predict" class="text-white">Dự đoán calo</a></li>
+                        <li><a href="/login" class="text-white">Đăng nhập</a></li>
+                        <li><a href="/register" class="text-white">Đăng ký</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Thành phố XYZ</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@caloburn.com</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 CaloBurn. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tính Năng Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Dự Đoán Chính Xác</h4>
+                        <p>Sử dụng các thuật toán học máy tiên tiến để dự đoán lượng calo tiêu thụ một cách chính xác.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Theo Dõi Tiến Trình</h4>
+                        <p>Lưu lại lịch sử dự đoán để theo dõi tiến trình tập luyện và lượng calo tiêu thụ của bạn.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Dễ Dàng Sử Dụng</h4>
+                        <p>Giao diện trực quan, thân thiện với người dùng, sử dụng mọi lúc mọi nơi trên mọi thiết bị.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Đánh Giá Từ Người Dùng</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card text-center">
+                        <img src="/api/placeholder/100/100" class="rounded-circle mb-3" alt="User 1">
+                        <h5>Nguyễn Văn A</h5>
+                        <p class="text-muted">Người tập thể hình</p>
+                        <p>"Ứng dụng này đã giúp tôi theo dõi chính xác lượng calo tiêu thụ trong quá trình tập luyện. Kết quả dự đoán rất gần với thực tế!"</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card text-center">
+                        <img src="/api/placeholder/100/100" class="rounded-circle mb-3" alt="User 2">
+                        <h5>Trần Thị B</h5>
+                        <p class="text-muted">Huấn luyện viên</p>
+                        <p>"Tôi sử dụng hệ thống này để theo dõi tiến trình cho học viên của mình. Giao diện dễ sử dụng và kết quả dự đoán rất đáng tin cậy."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card text-center">
+                        <img src="/api/placeholder/100/100" class="rounded-circle mb-3" alt="User 3">
+                        <h5>Lê Văn C</h5>
+                        <p class="text-muted">Người chạy marathon</p>
+                        <p>"Tôi đã sử dụng nhiều ứng dụng khác nhau, nhưng ứng dụng này cho kết quả chính xác nhất. Rất hữu ích cho việc lập kế hoạch luyện tập."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container">
+            <h2 class="text-center mb-5">Cách Hệ Thống Hoạt Động</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="/static/img/workflow.png" onerror="this.src='/api/placeholder/600/400'; this.alt='Workflow diagram';" class="img-fluid rounded shadow" alt="How it works">
+                </div>
+                <div class="col-lg-6">
+                    <div class="accordion" id="howItWorksAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Bước 1: Nhập thông tin cá nhân
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#howItWorksAccordion">
+                                <div class="accordion-body">
+                                    Nhập thông tin cá nhân như giới tính, tuổi tác, chiều cao, cân nặng và các thông số về bài tập như thời gian, nhịp tim, nhiệt độ cơ thể.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Bước 2: Phân tích dữ liệu
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#howItWorksAccordion">
+                                <div class="accordion-body">
+                                    Hệ thống sử dụng thuật toán học máy tiên tiến để phân tích dữ liệu đầu vào và so sánh với dữ liệu huấn luyện.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Bước 3: Dự đoán kết quả
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#howItWorksAccordion">
+                                <div class="accordion-body">
+                                    Dựa trên phân tích, hệ thống sẽ dự đoán lượng calo tiêu thụ chính xác cho bài tập của bạn và lưu lại kết quả để theo dõi tiến trình.
+                                </div>
+                            </div>
+                        </div>

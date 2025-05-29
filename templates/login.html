@@ -1,0 +1,33 @@
+<!-- filepath: c:\Users\ADMIN\Downloads\machine_learning_project-main\machine_learning_project-main\templates\login.html -->
+{% extends 'auth_base.html' %}
+
+{% block title %}Đăng nhập hệ thống{% endblock %}
+
+{% block content %}
+<div class="auth-card">
+    <div class="auth-header">
+<img src="{{ url_for('static', filename='image/kcal.png') }}" alt="Logo" class="top" width="100" height="100">
+        <h2>Đăng nhập hệ thống</h2>
+    </div>
+
+    <form method="post" class="auth-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-3">Đăng nhập</button>
+
+        <div class="auth-links mt-3 text-center">
+            <a href="{{ url_for('register') }}">Chưa có tài khoản? Đăng ký</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
