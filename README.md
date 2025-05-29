@@ -32,10 +32,13 @@ Các chỉ số đánh giá:
 + Mean Absolute Error (MAE) (Sai số trung bình tuyệt đối)
 + Cross-validation score (Kiểm tra tính ổn định của mô hình)
 
-## Cách chạy chương trình
-### 1. Cài đặt các thư viện cần thiết:
-`pip install numpy pandas seaborn matplotlib scikit-learn xgboost pyqt5`
-### 2. Chạy script huấn luyện mô hình:
-`python train.py`
-### 3. Chạy giao diện dự đoán:
-`python app.py`
+5. Giao diện phần mềm dự đoán calories
+![Screenshot (448)](https://github.com/user-attachments/assets/261f6e3b-48fe-4c5a-87bc-87e35f211ae1)
+![Screenshot (449)](https://github.com/user-attachments/assets/8eb5ef9a-2c52-4e4f-9a83-9eb716156e2d)
+![Screenshot (450)](https://github.com/user-attachments/assets/873faa10-7226-4bc8-af6b-6882a9abfccd)
+![Screenshot (451)](https://github.com/user-attachments/assets/df09a3d0-ef6d-4aff-8f0f-698c3554cc7e)
+![Screenshot (453)](https://github.com/user-attachments/assets/d0220048-9436-4701-bdd9-4fc29fb78455)
+![Screenshot (454)](https://github.com/user-attachments/assets/ea3463cf-da03-4cb7-ae2a-a41a513dd6fb)
+![Screenshot (455)](https://github.com/user-attachments/assets/037dcf10-2416-4369-98d3-77c3a89c833f)
+
+
