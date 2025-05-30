@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
+import pytz
 from datetime import timezone, timedelta
 
 import pickle
@@ -22,6 +23,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Initialize the database
 db = SQLAlchemy(app)
 
+def get_vietnam_time():
+    return datetime.now(pytz.timezone('Asia/Ho_Chi_Minh'))
+
 class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
@@ -29,7 +33,7 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
     role = db.Column(db.String(50), default='user')
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_vietnam_time)
 
 class Prediction(db.Model):
     __tablename__ = 'prediction'
@@ -43,7 +47,7 @@ class Prediction(db.Model):
     heart_rate = db.Column(db.Integer, nullable=False)
     body_temp = db.Column(db.Float, nullable=False)
     calories = db.Column(db.Float, nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_vietnam_time)
 
 # Create the database tables
 with app.app_context():
